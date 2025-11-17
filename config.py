@@ -23,7 +23,7 @@ class Config:
     WELCOME_IMAGE_URLS = [
         "https://i.ibb.co/7tw8p570/image.jpg",
     ]
-    ENABLE_WELCOME_IMAGE = True
+    ENABLE_WELCOME_IMAGE = False
     WELCOME_IMAGE_CAPTION = True
     
     # Anime-themed messages
