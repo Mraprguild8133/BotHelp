@@ -21,9 +21,9 @@ class Config:
     
     # Welcome message settings
     WELCOME_IMAGE_URLS = [
-        "https://i.imgur.com/8SqjK2v.png",
-        "https://i.imgur.com/9X8qjK2.png",
-        "https://i.imgur.com/7WqjK2v.png",
+        "https://i.ibb.co/7tw8p570/image.jpg",
+        "https://i.ibb.co/FqWwcPt4/image.jpg",
+        "https://i.ibb.co/S76ph51d/image.jpg",
     ]
     ENABLE_WELCOME_IMAGE = True
     WELCOME_IMAGE_CAPTION = True
