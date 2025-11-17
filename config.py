@@ -65,21 +65,21 @@ class Config:
         "goku": {
             "name": "Son Goku",
             "series": "Dragon Ball",
-            "image": "https://i.imgur.com/goku_image.jpg",
+            "image": "https://i.ibb.co/nqQwK6gg/image.jpg",
             "quote": "I am the hope of the universe.",
             "description": "Saiyan raised on Earth and the main protagonist of Dragon Ball series."
         },
         "luffy": {
             "name": "Monkey D. Luffy",
             "series": "One Piece",
-            "image": "https://i.imgur.com/luffy_image.jpg",
+            "image": "https://i.ibb.co/4RCwZnVn/image.jpg",
             "quote": "I'm gonna be King of the Pirates!",
             "description": "Captain of the Straw Hat Pirates with rubber powers from the Gum-Gum Fruit."
         },
         "saitama": {
             "name": "Saitama",
             "series": "One Punch Man",
-            "image": "https://i.imgur.com/saitama_image.jpg",
+            "image": "https://i.ibb.co/vxzsg5bT/image.jpg",
             "quote": "I'm just a hero for fun.",
             "description": "A hero who can defeat any opponent with a single punch."
         },
