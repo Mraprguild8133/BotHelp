@@ -86,42 +86,42 @@ class Config:
         "levi": {
             "name": "Levi Ackerman",
             "series": "Attack on Titan",
-            "image": "https://i.imgur.com/levi_image.jpg",
+            "image": "https://i.ibb.co/W4wzpL73/image.jpg",
             "quote": "Give up on your dreams and die.",
             "description": "Captain of the Survey Corps and humanity's strongest soldier."
         },
         "eren": {
             "name": "Eren Yeager",
             "series": "Attack on Titan",
-            "image": "https://i.imgur.com/eren_image.jpg",
+            "image": "https://i.ibb.co/ynGnjK7d/image.jpg",
             "quote": "I'm going to destroy every last one of them!",
             "description": "The main protagonist who possesses the power of the Attack Titan."
         },
         "gojo": {
             "name": "Satoru Gojo",
             "series": "Jujutsu Kaisen",
-            "image": "https://i.imgur.com/gojo_image.jpg",
+            "image": "https://i.ibb.co/bj1NZ0FP/image.jpg",
             "quote": "Throughout Heaven and Earth, I alone am the honored one.",
             "description": "The strongest jujutsu sorcerer and teacher at Tokyo Jujutsu High."
         },
         "nezuko": {
             "name": "Nezuko Kamado",
             "series": "Demon Slayer",
-            "image": "https://i.imgur.com/nezuko_image.jpg",
+            "image": "https://i.ibb.co/7xwTRQKq/image.jpg",
             "quote": "*Muffled sounds*",
             "description": "Tanjiro's younger sister who was turned into a demon but retains her humanity."
         },
         "light": {
             "name": "Light Yagami",
             "series": "Death Note",
-            "image": "https://i.imgur.com/light_image.jpg",
+            "image": "https://i.ibb.co/QvkF7vpC/image.jpg",
             "quote": "I am justice!",
             "description": "A genius high school student who obtains the Death Note and becomes Kira."
         },
         "asuna": {
             "name": "Asuna Yuuki",
             "series": "Sword Art Online",
-            "image": "https://i.imgur.com/asuna_image.jpg",
+            "image": "https://i.ibb.co/pvHxR3hs/image.jpg",
             "quote": "I'm not going to run away anymore...",
             "description": "The Sub-Commander of the Knights of the Blood and Kirito's love interest."
         }
