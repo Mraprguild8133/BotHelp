@@ -10,6 +10,9 @@ class Config:
     # Admin user IDs (get from @userinfobot)
     ADMIN_IDS: List[int] = [6300568870]  # Replace with actual user IDs
     
+    # Database settings
+    DATABASE_NAME = "anime_bot.db"
+    
     # Group settings
     MAX_WARNINGS = 3
     MUTE_DURATION_HOURS = 1
@@ -31,62 +34,114 @@ class Config:
         "People's dreams never end! - Marshall D. Teach (One Piece)",
         "If you don't like your destiny, don't accept it. - Naruto Uzumaki",
         "Hard work is worthless for those that don't believe in themselves. - Naruto Uzumaki",
+        "It's not the face that makes someone a monster, it's the choices they make. - Naruto Uzumaki",
+        "I am the hope of the universe. - Son Goku (Dragon Ball Z)",
+        "It's not the world that's imperfect. It's we who are imperfect. - Lelouch vi Britannia",
+        "The world isn't perfect. But it's there for us, doing the best it can. - Roy Mustang",
+        "A lesson without pain is meaningless. - Edward Elric (Fullmetal Alchemist)",
+        "The world is not beautiful, therefore it is. - Kino (Kino's Journey)"
     ]
     
     ANIME_WELCOME_MESSAGES = [
         "Welcome {user}! You've entered the world of anime! 🌸",
         "Konichiwa {user}! Ready for some anime adventures? ✨",
         "Welcome {user}! May your stay be as exciting as a shonen battle! ⚔️",
+        "Yōkoso {user}! The anime realm welcomes you! 🎌",
+        "Welcome {user}! Let the anime journey begin! 🎮",
+        "Irasshaimase {user}! The anime dojo welcomes you! 🥋",
+        "Welcome {user}! Your anime adventure starts now! 🌟",
+        "Welcome {user}! Grab some ramen and enjoy the anime vibes! 🍜"
     ]
     
-    # New Feature: Anime Character Database
+    # Anime Character Database
     ANIME_CHARACTERS = {
         "naruto": {
             "name": "Naruto Uzumaki",
             "series": "Naruto",
             "image": "https://i.imgur.com/naruto_image.jpg",
             "quote": "I'm not gonna run away, I never go back on my word!",
-            "description": "A shinobi of Konohagakure's Uzumaki clan."
+            "description": "A shinobi of Konohagakure's Uzumaki clan who dreams of becoming Hokage."
         },
         "goku": {
             "name": "Son Goku",
             "series": "Dragon Ball",
             "image": "https://i.imgur.com/goku_image.jpg",
             "quote": "I am the hope of the universe.",
-            "description": "Saiyan raised on Earth and the main protagonist."
+            "description": "Saiyan raised on Earth and the main protagonist of Dragon Ball series."
         },
         "luffy": {
             "name": "Monkey D. Luffy",
             "series": "One Piece",
             "image": "https://i.imgur.com/luffy_image.jpg",
             "quote": "I'm gonna be King of the Pirates!",
-            "description": "Captain of the Straw Hat Pirates."
+            "description": "Captain of the Straw Hat Pirates with rubber powers from the Gum-Gum Fruit."
+        },
+        "saitama": {
+            "name": "Saitama",
+            "series": "One Punch Man",
+            "image": "https://i.imgur.com/saitama_image.jpg",
+            "quote": "I'm just a hero for fun.",
+            "description": "A hero who can defeat any opponent with a single punch."
+        },
+        "levi": {
+            "name": "Levi Ackerman",
+            "series": "Attack on Titan",
+            "image": "https://i.imgur.com/levi_image.jpg",
+            "quote": "Give up on your dreams and die.",
+            "description": "Captain of the Survey Corps and humanity's strongest soldier."
+        },
+        "eren": {
+            "name": "Eren Yeager",
+            "series": "Attack on Titan",
+            "image": "https://i.imgur.com/eren_image.jpg",
+            "quote": "I'm going to destroy every last one of them!",
+            "description": "The main protagonist who possesses the power of the Attack Titan."
+        },
+        "gojo": {
+            "name": "Satoru Gojo",
+            "series": "Jujutsu Kaisen",
+            "image": "https://i.imgur.com/gojo_image.jpg",
+            "quote": "Throughout Heaven and Earth, I alone am the honored one.",
+            "description": "The strongest jujutsu sorcerer and teacher at Tokyo Jujutsu High."
+        },
+        "nezuko": {
+            "name": "Nezuko Kamado",
+            "series": "Demon Slayer",
+            "image": "https://i.imgur.com/nezuko_image.jpg",
+            "quote": "*Muffled sounds*",
+            "description": "Tanjiro's younger sister who was turned into a demon but retains her humanity."
+        },
+        "light": {
+            "name": "Light Yagami",
+            "series": "Death Note",
+            "image": "https://i.imgur.com/light_image.jpg",
+            "quote": "I am justice!",
+            "description": "A genius high school student who obtains the Death Note and becomes Kira."
+        },
+        "asuna": {
+            "name": "Asuna Yuuki",
+            "series": "Sword Art Online",
+            "image": "https://i.imgur.com/asuna_image.jpg",
+            "quote": "I'm not going to run away anymore...",
+            "description": "The Sub-Commander of the Knights of the Blood and Kirito's love interest."
         }
     }
     
-    # New Feature: Anime Poll Questions
-    ANIME_POLL_QUESTIONS = [
-        "Which anime has the best character development?",
-        "Who is the strongest anime character?",
-        "Best anime soundtrack?",
-        "Most emotional anime scene?",
-        "Favorite anime genre?",
-        "Best anime villain?"
-    ]
-    
-    # New Feature: Level System
+    # Level System Configuration
     LEVEL_CONFIG = {
         "ENABLE_LEVEL_SYSTEM": True,
         "XP_PER_MESSAGE": 5,
-        "XP_COOLDOWN": 60,  # seconds
+        "XP_COOLDOWN": 60,  # seconds between XP gains
         "LEVEL_UP_MESSAGES": [
             "🎉 {user} leveled up to level {level}! Sugoi!",
             "🌟 {user} reached level {level}! Amazing growth!",
             "🏆 Level up! {user} is now level {level}!",
+            "✨ {user} leveled up! Now at level {level}! Keep going!",
+            "🎯 Level up achieved! {user} is now level {level}!",
         ]
     }
     
-    # New Feature: Auto-Delete Settings
+    # Auto-Delete Settings
     AUTO_DELETE = {
         "ENABLE_AUTO_DELETE": True,
         "COMMAND_DELETE_DELAY": 30,  # seconds
@@ -94,7 +149,7 @@ class Config:
         "RULES_DELETE_DELAY": 600,  # seconds
     }
     
-    # New Feature: Custom Commands
+    # Custom Commands Description
     CUSTOM_COMMANDS = {
         "waifu": "Shows random waifu image and info",
         "husbando": "Shows random husbando image and info",
@@ -111,12 +166,157 @@ class Config:
         "command_failed": "❌ Failed to execute command: {error}",
         "welcome_bot": "Arigatou for adding me! I'll protect this anime community! 🌸\nUse /help to see my commands!",
         "spam_warning": "{user} please don't spam! 🚫",
-        "image_send_failed": "Failed to send image, sending text instead."
+        "image_send_failed": "Failed to send welcome image, sending text welcome instead.",
+        "database_error": "❌ Database error occurred. Please try again later."
     }
+    
+    # Rules
+    GROUP_RULES = """
+📜 *Anime Community Rules* 📜
+
+1. 🤝 *Be Respectful* - Treat everyone with respect and kindness
+2. 🎭 *Stay On Topic* - Keep discussions anime and manga related
+3. 🚫 *No Spam* - Don't flood the chat with messages
+4. 📛 *No NSFW Content* - Keep everything safe for work
+5. 🔗 *No Unsolicited Links* - Ask before posting external links
+6. 👥 *No Harassment* - Bullying and harassment won't be tolerated
+7. 🎨 *Credit Artists* - Always credit fan art and content creators
+8. 🏷️ *Use Appropriate Language* - Keep conversations friendly and appropriate
+9. 📢 *No Advertising* - Don't advertise without permission
+10. 🤖 *Respect the Bot* - Don't spam bot commands
+
+*Consequences for violations:*
+• 1st offense: Warning
+• 2nd offense: 1-hour mute
+• 3rd offense: 24-hour mute
+• 4th offense: Permanent ban
+
+Let's keep this community awesome for everyone! ✨
+    """
     
     # Logging configuration
     LOG_LEVEL = "INFO"
     LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    
+    # Feature toggles
+    FEATURES = {
+        "WELCOME_MESSAGES": True,
+        "LEVEL_SYSTEM": True,
+        "ANTI_SPAM": True,
+        "AUTO_DELETE": False,  # Set to True if you want auto-delete
+        "CHARACTER_DATABASE": True,
+        "QUIZ_SYSTEM": True,
+    }
+    
+    # Anime recommendations
+    ANIME_RECOMMENDATIONS = [
+        {
+            "title": "Attack on Titan",
+            "genre": "Action, Dark Fantasy, Drama",
+            "episodes": 75,
+            "rating": "9.0/10",
+            "description": "Humans fight for survival against giant humanoid creatures called Titans."
+        },
+        {
+            "title": "Fullmetal Alchemist: Brotherhood",
+            "genre": "Adventure, Fantasy, Steampunk",
+            "episodes": 64,
+            "rating": "9.1/10",
+            "description": "Two brothers search for the Philosopher's Stone to restore their bodies."
+        },
+        {
+            "title": "Death Note",
+            "genre": "Thriller, Psychological, Supernatural",
+            "episodes": 37,
+            "rating": "8.6/10",
+            "description": "A high school student discovers a notebook that can kill anyone whose name is written in it."
+        },
+        {
+            "title": "My Hero Academia",
+            "genre": "Action, Superhero, School",
+            "episodes": 113+,
+            "rating": "8.4/10",
+            "description": "A boy born without superpowers in a superhuman society dreams of becoming a hero."
+        },
+        {
+            "title": "Demon Slayer",
+            "genre": "Action, Fantasy, Supernatural",
+            "episodes": 55+,
+            "rating": "8.7/10",
+            "description": "A young boy becomes a demon slayer to save his sister and avenge his family."
+        },
+        {
+            "title": "One Punch Man",
+            "genre": "Action, Comedy, Superhero",
+            "episodes": 24+,
+            "rating": "8.7/10",
+            "description": "A hero who can defeat any opponent with a single punch grows bored from a lack of challenge."
+        },
+        {
+            "title": "Jujutsu Kaisen",
+            "genre": "Action, Supernatural, Horror",
+            "episodes": 24+,
+            "rating": "8.6/10",
+            "description": "A boy eats a cursed finger and becomes the vessel for a powerful curse."
+        },
+        {
+            "title": "Hunter x Hunter",
+            "genre": "Adventure, Fantasy, Martial Arts",
+            "episodes": 148,
+            "rating": "9.0/10",
+            "description": "A young boy aspires to become a Hunter to find his missing father."
+        }
+    ]
+    
+    # Waifu database (for fun commands)
+    WAIFUS = [
+        {
+            "name": "Rem",
+            "series": "Re:Zero",
+            "image": "https://i.imgur.com/rem_image.jpg",
+            "description": "A demon maid who is fiercely loyal and protective.",
+            "personality": "Loyal, Protective, Caring"
+        },
+        {
+            "name": "Zero Two",
+            "series": "Darling in the Franxx",
+            "image": "https://i.imgur.com/zerotwo_image.jpg",
+            "description": "A mysterious girl with red horns and exceptional piloting skills.",
+            "personality": "Confident, Mysterious, Passionate"
+        },
+        {
+            "name": "Mikasa Ackerman",
+            "series": "Attack on Titan",
+            "image": "https://i.imgur.com/mikasa_image.jpg",
+            "description": "One of the last remaining Asians and a skilled soldier.",
+            "personality": "Loyal, Strong, Protective"
+        }
+    ]
+    
+    # Husbando database (for fun commands)
+    HUSBANDOS = [
+        {
+            "name": "Levi Ackerman",
+            "series": "Attack on Titan",
+            "image": "https://i.imgur.com/levi_image.jpg",
+            "description": "Captain of the Survey Corps and humanity's strongest soldier.",
+            "personality": "Clean, Strong, Serious"
+        },
+        {
+            "name": "Satoru Gojo",
+            "series": "Jujutsu Kaisen",
+            "image": "https://i.imgur.com/gojo_image.jpg",
+            "description": "The strongest jujutsu sorcerer with incredible powers.",
+            "personality": "Confident, Playful, Powerful"
+        },
+        {
+            "name": "Kakashi Hatake",
+            "series": "Naruto",
+            "image": "https://i.imgur.com/kakashi_image.jpg",
+            "description": "The Copy Ninja with a mysterious past and powerful abilities.",
+            "personality": "Calm, Intelligent, Mysterious"
+        }
+    ]
 
 # Create config instance
 config = Config()
