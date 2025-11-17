@@ -8,7 +8,7 @@ class Config:
     BOT_TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
     
     # Admin user IDs (get from @userinfobot)
-    ADMIN_IDS: List[int] = [123456789, 987654321]  # Replace with actual user IDs
+    ADMIN_IDS: List[int] = [6300568870]  # Replace with actual user IDs
     
     # Group settings
     MAX_WARNINGS = 3
