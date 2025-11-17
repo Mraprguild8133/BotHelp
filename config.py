@@ -1,11 +1,11 @@
- # import os
+import os
 from typing import List, Dict
 
 class Config:
     """Configuration class for Anime Guardian Bot"""
     
     # Bot Token from BotFather
-    BOT_TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
     
     # Admin user IDs (get from @userinfobot)
     ADMIN_IDS: List[int] = [6300568870]  # Replace with actual user IDs
